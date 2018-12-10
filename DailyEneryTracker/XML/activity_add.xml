@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/editText_FoodName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Food Name"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/button_Home"
+        app:layout_constraintStart_toStartOf="@+id/editText_date"
+        app:layout_constraintTop_toBottomOf="@+id/editText_date" />
+
+    <EditText
+        android:id="@+id/editText_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Calories"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editText_date"
+        app:layout_constraintStart_toStartOf="@+id/editText_date"
+        app:layout_constraintTop_toBottomOf="@+id/editText_FoodName" />
+
+    <Button
+        android:id="@+id/button_Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="35dp"
+        android:onClick="add"
+        android:text="Add"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_unit"
+        app:layout_constraintTop_toBottomOf="@+id/editText_unit" />
+
+    <Button
+        android:id="@+id/button_Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:onClick="goHome"
+        android:text="Home"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_Add"
+        app:layout_constraintStart_toEndOf="@+id/button_Add" />
+
+    <EditText
+        android:id="@+id/editText_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:hint="mm-dd-yy"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
